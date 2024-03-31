@@ -1,0 +1,146 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.header {
+  background-color: #025C64;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #003C42;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  color: #DB7C7C;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.button.signin {
+  background-color: #025C64;
+  color: #fff;
+  border: none;
+}
+
+.button.getstarted {
+  background-color: transparent;
+  border: 2px solid #025C64;
+  color: #025C64;
+}
+
+.button:hover {
+  background-color: #DB7C7C;
+}
+
+.search-bar {
+  padding: 10px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 20px;
+  border: 2px solid #025C64;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  background-color: #025C64;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.search-bar button:hover {
+  background-color: #DB7C7C;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #63ADA8;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #63ADA8; /* Complementary color */
+}
