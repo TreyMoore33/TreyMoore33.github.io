@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content= "width=device-width, initial scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie-edge">
+  <link rel="stylesheet" href="css\style.css">
+  <title>RecruitRite: Welcome</title>
+</head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <img src="img\logo.jpg" alt="Company Logo" class="logo-img">
+      </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="apply.php">Applicant Search</a></li>
+      <li><a href="job.php">Job Search</a></li>
+      <li><a href="profile.html">Manage Profile</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for jobs..." onkeydown="if(event.keyCode==13) event.preventDefault()">
+      <button onclick="search()">Search</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Account Details</h1>
+    <h2>Profile Information</h2>
+    <div class="profile-info">
+      <p><strong>Name:</strong> John Doe</p>
+      <p><strong>Email:</strong> johndoe@example.com</p>
+      <p><strong>User Type:</strong> Recruiter</p>
+    </div>
+    <h2>Additional Information</h2>
+    <form action="update_profile.php" method="POST">
+      <div class="input-group">
+        <label for="education">Education:</label>
+        <textarea id="education" name="education" rows="4"></textarea>
+      </div>
+      <div class="input-group">
+        <label for="job_experience">Previous Job Experience:</label>
+        <textarea id="job_experience" name="job_experience" rows="4"></textarea>
+      </div>
+      <div class="input-group">
+        <label for="personal_description">Personal Description:</label>
+        <textarea id="personal_description" name="personal_description" rows="4"></textarea>
+      </div>
+      <button type="submit">Update</button>
+    </form>
+  </div>
+</body>
+
+  <footer>
+    <center>
+      Trey Moore (110063158) - 2024
+    </center>
+  </footer>
