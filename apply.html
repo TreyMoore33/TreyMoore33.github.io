@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In</title>
+<link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <img src="img\logo.jpg" alt="Company Logo" class="logo-img">
+    </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="apply.php">Applicant Search</a></li>
+    <li><a href="job.php">Job Search</a></li>
+    <li><a href="profile.html">Manage Profile</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+  <div class="search-bar">
+    <input type="text" placeholder="Search for jobs..." onkeydown="if(event.keyCode==13) event.preventDefault()">
+    <button onclick="search()">Search</button>
+  </div>
+
+<center>
+  <div class="user-list">
+     <h2>User Profiles</h2>
+
+     <center>
+       <div id="user-list-container"></div>
+     </center>
+
+     <script>
+     window.onload = function() {
+         // Fetch user profiles from the server
+         fetch('php/get_user_profiles.php')
+             .then(response => response.text())
+             .then(data => {
+                 // Inject the retrieved content into the user-list-container
+                 document.getElementById('user-list-container').innerHTML = data;
+             })
+             .catch(error => console.error('Error fetching user profiles:', error));
+     };
+     </script>
+
+   </div>
+</center>
+  <footer>
+    <center>
+      Trey Moore (110063158) - 2024
+    </center>
+  </footer>
+</body>
+
+</html>

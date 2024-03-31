@@ -39,27 +39,35 @@
     chart.draw(data, options);
   }
 
-  function drawNewJobPostingsChart() {
-      var data = google.visualization.arrayToDataTable([
-        ['Month', 'New Job Postings'],
-        ['January 2024', 2380],
-        ['February 2024', 3118],
-        ['March 2024', 2117],
-        ['April 2024', 2984]
-      ]);
-
-      var options = {
-        title: 'New Job Postings Throughout Current Quarter',
-        curveType: 'function',
-        legend: { position: 'bottom' }
-      };
-
-      var chart = new google.visualization.LineChart(document.getElementById('new_job_postings_chart'));
-
-      chart.draw(data, options);
-    }
-
 </script>
+<style>
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.button.signin {
+  background-color: #025C64; /* Dark blue */
+  color: #fff; /* White text */
+  border: none;
+}
+
+.button.getstarted {
+  background-color: transparent; /* Transparent background */
+  border: 2px solid #025C64; /* Dark blue border */
+  color: #025C64; /* Dark blue text */
+}
+
+.button:hover {
+  background-color: #DB7C7C; /* Light red on hover */
+}
+</style>
 
   <title>RecruitRite: Welcome</title>
 </head>
@@ -70,8 +78,8 @@
       </div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="apply.php">Applicant Search</a></li>
-      <li><a href="job.php">Job Search</a></li>
+      <li><a href="apply.html">Applicant Search</a></li>
+      <li><a href="job.html">Job Search</a></li>
       <li><a href="profile.html">Manage Profile</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
@@ -85,8 +93,9 @@
     <h1>Change your life with RecruitRite</h1>
   <br>
   <p>Founded in 2024, RecruitRite is meant to help connect job recruiters and applicants in order to find the perfect fit.</p>
-  <a href="html\sign_up.html"><button type="button">Get Started</button></a>
-  <a href="html\login.html"><button type="button">Sign In</button></a>
+<a href="login.html" class="button signin">Sign In</a>
+<a href="sign_up.html" class="button getstarted">Get Started</a>
+
   <br>
 <br>
 <div id="curve_chart" style="width: 900px; height: 500px"></div>
